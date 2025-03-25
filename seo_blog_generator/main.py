@@ -65,7 +65,7 @@ def save_blog(content):
     with open("output/final_blog.md", "w", encoding="utf-8") as f:
         f.write(content)
 
-    html_content = f"<html><body><h1>SEO Blog</h1><p>{content.replace('<br>')}</p></body></html>"
+    html_content = f"<html><body><h1>SEO Blog</h1><p>{content.replace('\n','<br>')}</p></body></html>"
     with open("output/final_blog.html", "w", encoding="utf-8") as f:
         f.write(html_content)
 
